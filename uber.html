@@ -109,6 +109,56 @@
             position: relative; /* 使回首頁按鈕不擋住底部文字 */
             clear: both;
         }
+        .navigation-dropdown {  /* 新增 */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            border-radius: 5px;
+            overflow: hidden;
+            z-index: 999;
+        }
+
+        .navigation-button {  /* 新增 */
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .navigation-button:hover {  /* 新增 */
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
+
+        .dropdown-content {  /* 新增 */
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {  /* 新增 */
+            color: black;
+            padding: 12px 16px;
+            display: block;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-content a:hover {  /* 新增 */
+            background-color: #f1f1f1;
+        }
+
+        .navigation-dropdown:hover .dropdown-content {  /* 新增 */
+            display: block;
+        }
     </style>
 </head>
 
@@ -154,12 +204,15 @@
         </div>
     </section>
        <div class="footer-container">
-        <div class="navigation-buttons">
-            <a class="navigation-button" href="index.html">首頁</a>
-            <div class="navigation-button" onclick="scrollToTop()">回到top</div>
-           
+        <div class="navigation-dropdown">
+            <div class="navigation-button">選單</div>
+            <div class="dropdown-content">
+                <a href="index.html">首頁</a>
+                <a href="about.html">關於我</a>
+                <a onclick="scrollToTop()">回到top</a>
+            </div>
         </div>
-    </div
+    </div>
 
 
     <footer>
