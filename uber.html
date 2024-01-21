@@ -204,12 +204,13 @@
         </div>
     </section>
        <div class="footer-container">
-        <div class="navigation-dropdown" onclick="toggleDropdown(this)">  <!-- 修改 -->
-            <div class="navigation-button">選單</div>
+        <div class="navigation-dropdown">
+            <div class="navigation-button" onclick="toggleDropdown()">選單</div>
             <div class="dropdown-content">
+                <!-- 更動：為首頁的連結指定實際頁面 -->
                 <a href="index.html">首頁</a>
-                <a href="about.html">關於我</a>
-                <a onclick="scrollToTop()">回到top</a>
+                <!-- 更動：使用scrollToTop函數實現回到頂部的功能 -->
+                <a href="#" onclick="scrollToTop()">回到頂部</a>
             </div>
         </div>
     </div>
@@ -219,18 +220,20 @@
         &copy; 2024 Hope4real. All rights reserved.
     </footer>
     <script>
-    function toggleDropdown() {
-        var dropdown = document.querySelector('.navigation-dropdown');
-        dropdown.classList.toggle('active');
-    }
+        // 更動：修改toggleDropdown函數
+        function toggleDropdown() {
+            var dropdown = document.querySelector('.navigation-dropdown');
+            dropdown.classList.toggle('active');
+        }
 
-    function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    }
-</script>
+        // 更動：新增scrollToTop函數
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 
 </body>
     <script src="js/index.js"></script>
