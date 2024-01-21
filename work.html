@@ -13,17 +13,21 @@
             background-color: #f4f4f4;
             text-align: center;
             padding: 50px;
+            /* 添加了平滑過渡效果 */
+            transition: background-color 0.5s ease;
         }
 
         h1 {
             color: #333;
+            margin-bottom: 20px; /* 新增：增加標題與內文的間距 */
         }
 
         p {
             color: #666;
             font-size: 18px;
+            margin-bottom: 40px; /* 新增：增加段落與下方按鈕的間距 */
         }
-      
+
         .navigation-buttons {
             position: fixed;
             bottom: 20px;
@@ -43,7 +47,7 @@
             border-radius: 5px;
             transition: transform 0.3s, background-color 0.3s;
             text-align: center;
-            cursor: pointer; /* 新增：讓鼠標顯示為手指形狀 */
+            cursor: pointer;
         }
 
         .navigation-button:hover {
@@ -52,10 +56,11 @@
         }
 
         iframe {
-            width: 50%;
-            max-width: 300px;
+            width: 100%; /* 修改：使用 100% 寬度以便更好地適應不同螢幕大小 */
+            max-width: 480px; /* 新增：設定最大寬度以防止 iframe 過寬 */
+            height: 480px; /* 新增：設定固定高度以防止 iframe 過高 */
             margin-top: 30px;
-            
+            border: none; /* 新增：去除 iframe 的邊框 */
         }
     </style>
 </head>
