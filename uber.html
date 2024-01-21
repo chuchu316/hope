@@ -159,6 +159,31 @@
         .navigation-dropdown:hover .dropdown-content {  /* 新增 */
             display: block;
         }
+        .floating-menu {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.menu-item {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    text-align: center;
+}
+
+.menu-item:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
     </style>
 </head>
 
