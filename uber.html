@@ -219,17 +219,19 @@
         &copy; 2024 Hope4real. All rights reserved.
     </footer>
     <script>
-        function toggleDropdown(element) {
-            element.classList.toggle('active');
-        }
+    function toggleDropdown() {
+        var dropdown = document.querySelector('.navigation-dropdown');
+        dropdown.classList.toggle('active');
+    }
 
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-    </script>
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+</script>
+
 </body>
     <script src="js/index.js"></script>
 
