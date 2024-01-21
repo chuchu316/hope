@@ -23,6 +23,9 @@
         }
 
         section {
+            display: flex;
+            flex-wrap: wrap; /* 新增：允許內容換行 */
+            justify-content: space-around; /* 新增：水平分散內容 */
             margin: 20px;
         }
 
@@ -37,6 +40,8 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
             transition: transform 0.3s; /* 添加 transform 属性，使框架有过渡效果 */
+            width: 30%; /* 新增：限制內容寬度 */
+            box-sizing: border-box; /* 新增：使寬度包含內邊距和邊框 */
         }
 
         .content:hover {
@@ -94,6 +99,7 @@
             border-radius: 5px;
             transition: transform 0.3s, background-color 0.3s;
             text-align: center;
+            cursor: pointer; /* 新增：讓鼠標顯示為手指形狀 */
         }
 
         .navigation-button:hover {
