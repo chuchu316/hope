@@ -461,6 +461,11 @@ footer nav {
   }
 }
 /* 浮動按鈕 */
+        .footer-container {
+            position: relative;
+            margin-top: 20px; /* 使回首頁按鈕不擋住內容 */
+        }
+
         .navigation-buttons {
             position: fixed;
             bottom: 20px;
