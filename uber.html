@@ -53,28 +53,36 @@
             margin-top: 10px; /* 添加一點上邊距 */
         }
 
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        .footer-container {
+            position: relative;
+            margin-top: 20px; /* 使回首頁按鈕不擋住內容 */
         }
+
         .back-to-home {
-            display: inline-block;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
             padding: 10px 20px;
             background-color: #4CAF50;
             color: white;
             text-decoration: none;
             border-radius: 5px;
             transition: transform 0.3s, background-color 0.3s;
+            z-index: 999;
         }
 
         .back-to-home:hover {
             transform: scale(1.1);
             background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative; /* 使回首頁按鈕不擋住底部文字 */
+            clear: both;
         }
     </style>
 </head>
@@ -108,6 +116,10 @@
             </div>
         </div>
     </section>
+        <div class="footer-container">
+            <a class="back-to-home" href="＃">回首頁</a>
+        </div>
+
 
     <footer>
         &copy; 2024 Hope4real. All rights reserved.
