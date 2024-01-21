@@ -7,11 +7,6 @@ ham.addEventListener("click", function (event) {
 
 // dropdown.js
 
-function toggleDropdown() {
-    var dropdown = document.querySelector('.navigation-dropdown');
-    dropdown.classList.toggle('active');
-}
-
 function scrollToTop() {
     window.scrollTo({
         top: 0,
