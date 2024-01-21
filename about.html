@@ -12,6 +12,7 @@
             margin: 0;
             padding: 0;
             background: linear-gradient(180deg, #f0f0f0 0%, #e0e0e0 100%);
+            transition: background-color 0.5s ease;
         }
 
         header {
@@ -19,6 +20,7 @@
             color: white;
             padding: 10px;
             text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         section {
@@ -27,6 +29,9 @@
 
         h2 {
             color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
         }
 
         .content {
@@ -35,6 +40,12 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .content:hover {
+            /* 鼠標懸停時改變盒子陰影以產生浮動效果 */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
         .values {
@@ -67,7 +78,7 @@
             text-align: center;
             padding: 10px;
             position: relative; /* 使回首頁按鈕不擋住底部文字 */
-            clear: both;
+            /* 移除 clear:both 屬性 */
         }
         .navigation-buttons {
             position: fixed;
