@@ -56,13 +56,13 @@
             transform: scale(1.1); /* 滑鼠懸停時放大 1.1 倍 */
         }
 
+       
         img {
             max-width: 100%;
-            height: auto;
-            weight: auto;
+            max-height: 100%; /* 設定最大高度 */
             border-radius: 8px;
             margin-top: 10px;
-            transition: transform 0.3s; /* 添加 transform 属性，使圖片有过渡效果 */
+            transition: transform 0.3s;
         }
 
         img:hover {
