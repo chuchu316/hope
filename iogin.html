@@ -4,26 +4,131 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- BOXICONS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
-    <title>Ludiflex | Login & Registration</title>
+    <link rel="stylesheet" href="css/login.css">
+    <title>Ludiflex | 登入與註冊</title>
 </head>
 <body>
- 
-<!----------------------------- Form box ----------------------------------->    
-    
-        
-        <!------------------- login form -------------------------->
-
-        
-
-        <!------------------- registration form -------------------------->
-        
-
-
-
-        <script></script>
-
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-logo">
+                <p>LOGO .</p>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#" class="link active">首頁</a></li>
+                    <li><a href="#" class="link">部落格</a></li>
+                    <li><a href="#" class="link">服務</a></li>
+                    <li><a href="#" class="link">關於</a></li>
+                </ul>
+            </div>
+            <div class="nav-button">
+                <button class="btn white-btn" id="loginBtn" onclick="login()">登入</button>
+                <button class="btn" id="registerBtn" onclick="register()">註冊</button>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+        <!----------------------------- 表單區域 ----------------------------------->
+        <div class="form-box">
+            <!------------------- 登入表單 -------------------------->
+            <div class="login-container" id="login">
+                <div class="top">
+                    <span>還沒有帳號？ <a href="#" onclick="register()">註冊</a></span>
+                    <header>登入</header>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="使用者名稱或電子郵件">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="密碼">
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="登入">
+                </div>
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="login-check">
+                        <label for="login-check"> 記住我</label>
+                    </div>
+                    <div class="two">
+                        <label><a href="#">忘記密碼？</a></label>
+                    </div>
+                </div>
+            </div>
+            <!------------------- 註冊表單 -------------------------->
+            <div class="register-container" id="register">
+                <div class="top">
+                    <span>已有帳號？ <a href="#" onclick="login()">登入</a></span>
+                    <header>註冊</header>
+                </div>
+                <div class="two-forms">
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="名字">
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="姓氏">
+                        <i class="bx bx-user"></i>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="電子郵件">
+                    <i class="bx bx-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="密碼">
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="註冊">
+                </div>
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="register-check">
+                        <label for="register-check"> 記住我</label>
+                    </div>
+                    <div class="two">
+                        <label><a href="#">條款與條件</a></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function myMenuFunction() {
+            var i = document.getElementById("navMenu");
+            if(i.className === "nav-menu") {
+                i.className += " responsive";
+            } else {
+                i.className = "nav-menu";
+            }
+        }
+    </script>
+    <script>
+        var a = document.getElementById("loginBtn");
+        var b = document.getElementById("registerBtn");
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        function login() {
+            x.style.left = "4px";
+            y.style.right = "-520px";
+            a.className += " white-btn";
+            b.className = "btn";
+            x.style.opacity = 1;
+            y.style.opacity = 0;
+        }
+        function register() {
+            x.style.left = "-510px";
+            y.style.right = "5px";
+            a.className = "btn";
+            b.className += " white-btn";
+            x.style.opacity = 0;
+            y.style.opacity = 1;
+        }
+    </script>
 </body>
 </html>
